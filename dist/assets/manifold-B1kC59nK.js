@@ -1,0 +1,1 @@
+var e=`/assets/manifold-BE4c7gO-.wasm`;export{e as default};
