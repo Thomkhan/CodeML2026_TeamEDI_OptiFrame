@@ -1,0 +1,38 @@
+{
+  "name": "optiframe",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "selftest": "node scripts/selftest/build.mjs && node scripts/selftest/dist/frame.mjs && SELFTEST_ENTRY=scripts/selftest/svg.ts SELFTEST_OUT=svg.mjs node scripts/selftest/build.mjs && node scripts/selftest/dist/svg.mjs",
+    "harness": "node scripts/headless/build.mjs",
+    "sheet": "python3 scripts/make_marker_sheet.py"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.170.41",
+    "@tensorflow/tfjs-backend-wasm": "^4.22.0",
+    "@tensorflow/tfjs-converter": "^4.22.0",
+    "@tensorflow/tfjs-core": "^4.22.0",
+    "@types/qrcode": "^1.5.6",
+    "@types/three": "^0.186.0",
+    "js-aruco2": "^2.0.0",
+    "manifold-3d": "^3.5.4",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
